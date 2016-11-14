@@ -476,4 +476,12 @@ startMainWindow = () => {
     Tabs.on('insert', refreshMenu);
     Tabs.on('update', refreshMenu);
     Tabs.on('delete', refreshMenu);
+
+
+
+
+    const trezor = require('trezor.js-node');
+
+var list = new trezor.DeviceList();
+list.on('connect', console.log.bind('CONNECT TREZOR'));
 };
