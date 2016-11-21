@@ -7,7 +7,7 @@ if (squirrelStartup) exit();
 global._ = require('./modules/utils/underscore');
 const { app, dialog, ipcMain, shell } = require('electron');
 const timesync = require('os-timesync');
-const syncDb = require('./modules/syncDb.js');
+const dbSync = require('./modules/dbSync.js');
 const i18n = require('./modules/i18n.js');
 const logger = require('./modules/utils/logger');
 const Sockets = require('./modules/sockets');
@@ -79,7 +79,7 @@ if (Settings.uiMode === 'wallet') {
         ? `file://${__dirname}/interface/wallet/index.html`
         : 'http://localhost:3050';
     global.interfacePopupsUrl = (Settings.inProductionMode)
-        ? `file://${__dirname}/interface/wallet/index.html`
+        ? `file://${__dirname}/interface/index.html`
         : 'http://localhost:3000';
 
 // - MIST
@@ -87,7 +87,7 @@ if (Settings.uiMode === 'wallet') {
     log.info('Starting in Mist mode');
 
     let url = (Settings.inProductionMode)
-        ? `file://${__dirname}/interface/wallet/index.html`
+        ? `file://${__dirname}/interface/index.html`
         : 'http://localhost:3000';
 
     if (Settings.cli.resetTabs) {
@@ -150,8 +150,6 @@ app.on('before-quit', (event) => {
 
 let mainWindow;
 let splashWindow;
-let onReady;
-let startMainWindow;
 
 // This method will be called when Electron has done everything
 // initialization and ready for creating browser windows.
@@ -161,7 +159,7 @@ app.on('ready', () => {
         dialog.showErrorBox('Insecure RPC connection', `
 WARNING: You are connecting to an Ethereum node via: ${Settings.rpcHttpPath}
 
-This is less secure than using local IPC - your passwords will be sent over the wire as plaintext.
+This is less secure than using local IPC - your passwords will be sent over the wire in plaintext.
 
 Only do this if you have secured your HTTP connection or you know what you are doing.
 `);
@@ -175,9 +173,9 @@ Only do this if you have secured your HTTP connection or you know what you are d
 });
 
 
-onReady = () => {
+let onReady = () => {
     // setup DB sync to backend
-    syncDb.backendSync();
+    dbSync.backendSyncInit();
 
     // Initialise window mgr
     Windows.init();
@@ -189,7 +187,7 @@ onReady = () => {
     ipcProviderBackend.init();
 
     // instantiate custom protocols
-    require('./customProtocols.js');
+    // require('./customProtocols.js');
 
     // add menu already here, so we have copy and past functionality
     appMenu();
@@ -324,9 +322,9 @@ onReady = () => {
                     type: 'warning',
                     buttons: ['OK'],
                     message: global.i18n.t('mist.errors.legacyChain.title'),
-                    detail: global.i18n.t('mist.errors.legacyChain.description'),
+                    detail: global.i18n.t('mist.errors.legacyChain.description')
                 }, () => {
-                    shell.openExternal('https://github.com/ethereum/mist/releases/0.8.2');
+                    shell.openExternal('https://github.com/ethereum/mist/releases');
                     app.quit();
                 });
 
@@ -366,7 +364,7 @@ onReady = () => {
                             },
                         });
 
-                        onboardingWindow.on('close', () => {
+                        onboardingWindow.on('closed', () => {
                             app.quit();
                         });
 
@@ -391,7 +389,7 @@ onReady = () => {
                         // launch app
                         ipcMain.on('onBoarding_launchApp', (e) => {
                             // prevent that it closes the app
-                            onboardingWindow.removeAllListeners('close');
+                            onboardingWindow.removeAllListeners('closed');
                             onboardingWindow.close();
 
                             ipcMain.removeAllListeners('onBoarding_changeNet');
@@ -437,7 +435,7 @@ Start the main window and all its processes
 
 @method startMainWindow
 */
-startMainWindow = () => {
+let startMainWindow = () => {
     log.info(`Loading Interface at ${global.interfaceAppUrl}`);
 
     mainWindow.on('ready', () => {
@@ -456,7 +454,7 @@ startMainWindow = () => {
     });
 
     // observe Tabs for changes and refresh menu
-    const Tabs = global.db.getCollection('tabs');
+    const Tabs = global.db.getCollection('UI_tabs');
 
     const sortedTabs = Tabs.addDynamicView('sorted_tabs');
     sortedTabs.applySimpleSort('position', false);

@@ -10,10 +10,10 @@ const BigNumber = require('bignumber.js');
 const Q = require('bluebird');
 const Web3 = require('web3');
 const web3Admin = require('../web3Admin.js');
-const syncDb = require('../syncDb.js');
+const dbSync = require('../dbSync.js');
 const https = require('https');
 
-require('./include/openExternal.js');
+require('./include/openPopup.js');
 require('./include/setBasePath')('interface');
 
 
@@ -34,6 +34,6 @@ window.Q = Q;
 window.web3 = new Web3(new Web3.providers.IpcProvider('', ipcProviderWrapper));
 web3Admin.extend(window.web3);
 
-window.syncDb = syncDb;
+window.dbSync = dbSync;
 window.ipc = ipc;
 window.https = https;
