@@ -46,7 +46,7 @@
                 return;
             }
 
-            if (data.type === 'data') {
+            if (data.type === 'data' || data.type === 'error') {
 
                 var id = null;
                 var message = data.message;
@@ -70,10 +70,10 @@
                 } else if(_this.responseCallbacks[id]) {
 
                     // batch results
-                    if (message instanceof Array) {
-                        var results = message.map(function (res) {
-                            return res.result;
-                        });
+                    if (data.type === 'error') {
+                        _this.responseCallbacks[id](message);
+                    } else if (message instanceof Array) {
+                        var results = message;
 
                         // make sure batch results are returned in the right order
                         if (_this.responseCallbacks[id].batchIds) {
@@ -81,15 +81,33 @@
                                 results[i] = message.find(function (el) {
                                     return el.id === _this.responseCallbacks[id].batchIds[i];
                                  }) || results[i];
+
                             }
                         }
 
 
-                        _this.responseCallbacks[id](null, results);
+                        _this.responseCallbacks[id](null, message.map(function (res) {
+                            var result = {};
+
+                            if (res.result) {
+                                result.result = res.result;
+                            }
+                            if (res.error) {
+                                result.error = res.error;
+                            }
+
+                            return result;
+                        }));
 
                     // single result
                     } else {
-                        _this.responseCallbacks[id](null, message.result);
+                        if (data.type === 'error') {
+                            _this.responseCallbacks[id](message);
+                        } else if (message.error) {
+                            _this.responseCallbacks[id](message.error);
+                        } else {
+                            _this.responseCallbacks[id](null, message.result);
+                        }
                     }
 
                     delete _this.responseCallbacks[id];
