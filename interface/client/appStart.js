@@ -41,19 +41,19 @@ mistInit = function() {
     }
 
     // overwrite wallet on start again, but use $set to preserve account titles
-    // Tabs.upsert(
-    // { _id: 'wallet' },
-    // {
-    // $set: {
-    // url: 'https://wallet.ethereum.org',
-    // redirect: 'https://wallet.ethereum.org',
-    // position: 1,
-    // permissions: {
-    // admin: true
-    // }
-    // }
-    // }
-    // );
+    Tabs.upsert(
+      { _id: 'wallet' },
+      {
+        $set: {
+          url: 'http://localhost:3050',
+          redirect: 'http://localhost:3050',
+          position: 1,
+          permissions: {
+            admin: true
+          }
+        }
+      }
+    );
 
     // on first use of Mist, show the wallet to nudge the user to create an account
     if (
