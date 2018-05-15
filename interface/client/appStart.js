@@ -5,6 +5,7 @@ import { getLanguage } from './actions.js';
 import About from '../components/About';
 import RequestAccount from '../components/RequestAccount';
 import NodeInfo from '../components/NodeInfo';
+import SendTransactionConfirmation from '../components/SendTransactionConfirmation';
 
 /**
 The init function of Mist
@@ -40,19 +41,19 @@ mistInit = function() {
     }
 
     // overwrite wallet on start again, but use $set to preserve account titles
-    Tabs.upsert(
-      { _id: 'wallet' },
-      {
-        $set: {
-          url: 'https://wallet.ethereum.org',
-          redirect: 'https://wallet.ethereum.org',
-          position: 1,
-          permissions: {
-            admin: true
-          }
-        }
-      }
-    );
+    // Tabs.upsert(
+    // { _id: 'wallet' },
+    // {
+    // $set: {
+    // url: 'https://wallet.ethereum.org',
+    // redirect: 'https://wallet.ethereum.org',
+    // position: 1,
+    // permissions: {
+    // admin: true
+    // }
+    // }
+    // }
+    // );
 
     // on first use of Mist, show the wallet to nudge the user to create an account
     if (
@@ -73,14 +74,20 @@ function renderReactComponentPopup(locationHash) {
   // JSX can't evaluate an expression or string, so map imported components here
   const components = {
     About,
-    RequestAccount
+    RequestAccount,
+    SendTransactionConfirmation
   };
 
   // Only render a component if it exists
   if (!!components[componentName]) {
     const Component = components[componentName];
 
-    render(<Component />, document.getElementById('react-entry'));
+    render(
+      <Provider store={store}>
+        <Component />
+      </Provider>,
+      document.getElementById('react-entry')
+    );
   }
 }
 
