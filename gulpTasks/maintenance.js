@@ -34,7 +34,7 @@ gulp.task('update-nodes', cb => {
 
         // Query commit hash (first 8 characters)
         got(
-          `https://api.github.com/repos/ethereum/go-ethereum/commits/${tagName}`,
+          `https://api.github.com/repos/Ether1Project/Ether1/commits/${tagName}`,
           { json: true }
         )
           .then(response => {
