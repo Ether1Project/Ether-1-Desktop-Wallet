@@ -18,7 +18,7 @@ gulp.task('update-nodes', cb => {
   const geth = newJson.clients.Geth;
 
   // Query latest geth version
-  got('https://api.github.com/repos/ethereum/go-ethereum/releases/latest', {
+  got('https://github.com/Ether1Project/Ether1/releases', {
     json: true
   })
     .then(response => {
