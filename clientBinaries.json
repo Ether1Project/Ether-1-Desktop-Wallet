@@ -8,7 +8,7 @@
                         "download": {
                             "url": "https://github.com/Ether1Project/Ether1/files/2033831/ether1-linux-1.1.2.tar.gz",
                             "type": "tar",
-                            "md5": "46a76e77fc9ae4dc9f8d1cf50f3b5798",
+                            "md5": "9be91a9dc9fa41714961151c76789180",
                             "bin": "ether1-linux-1.1.2/geth"
                         },
                         "bin": "geth",
@@ -19,7 +19,7 @@
                                 ],
                                 "output": [
                                     "Geth",
-                                    "1.8.2"
+                                    "1.9.2"
                                 ]
                             }
                         }
@@ -28,7 +28,7 @@
                         "download": {
                             "url": "https://github.com/Ether1Project/Ether1/files/2033831/ether1-linux-1.1.2.tar.gz",
                             "type": "tar",
-                            "md5": "ac296bdc4eb4d2ba0d3e2c304ae457b5",
+                            "md5": "9be91a9dc9fa41714961151c76789180",
                             "bin": "ether1-linux-1.1.2/geth"
                         },
                         "bin": "geth",
@@ -39,7 +39,7 @@
                                 ],
                                 "output": [
                                     "Geth",
-                                    "1.8.2"
+                                    "1.9.2"
                                 ]
                             }
                         }
@@ -50,7 +50,7 @@
                         "download": {
                             "url": "https://github.com/Ether1Project/Ether1/files/2033831/ether1-linux-1.1.2.tar.gz",
                             "type": "tar",
-                            "md5": "33e03f5df5798c3efb8aabd7c11fdd34",
+                            "md5": "a86c74decb817c72558d8480398c31fc",
                             "bin": "ether1-linux-1.1.2/geth"
                         },
                         "bin": "geth",
@@ -61,7 +61,7 @@
                                 ],
                                 "output": [
                                     "Geth",
-                                    "1.8.2"
+                                    "1.9.2"
                                 ]
                             }
                         }
@@ -72,7 +72,7 @@
                         "download": {
                             "url": "https://github.com/Ether1Project/Ether1/files/2033832/ether1-windows-amd64-1.1.2.zip",
                             "type": "zip",
-                            "md5": "f498df54aaa42f4269c2d2d06df482fd",
+                            "md5": "a86c74decb817c72558d8480398c31fc",
                             "bin": "ether1-windows-amd64-1.1.2\\geth.exe"
                         },
                         "bin": "geth.exe",
@@ -83,7 +83,7 @@
                                 ],
                                 "output": [
                                     "Geth",
-                                    "1.8.2"
+                                    "1.9.2"
                                 ]
                             }
                         }
@@ -92,7 +92,7 @@
                         "download": {
                             "url": "https://github.com/Ether1Project/Ether1/files/2033832/ether1-windows-amd64-1.1.2.zip",
                             "type": "zip",
-                            "md5": "4760b54e20de3ee50237ea8df896fb6f",
+                            "md5": "a86c74decb817c72558d8480398c31fc",
                             "bin": "ether1-windows-amd64-1.1.2\\geth.exe"
                         },
                         "bin": "geth.exe",
@@ -103,7 +103,7 @@
                                 ],
                                 "output": [
                                     "Geth",
-                                    "1.8.2"
+                                    "1.9.2"
                                 ]
                             }
                         }
