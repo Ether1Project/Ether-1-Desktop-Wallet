@@ -23,7 +23,7 @@ const check = (exports.check = () => {
       break;
   }
 
-  return got('https://api.github.com/repos/ethereum/mist/releases', {
+  return got('https://api.github.com/repos/Ether1Project/Ether-1-Desktop-Wallet/releases', {
     timeout: 3000,
     json: true
   })
