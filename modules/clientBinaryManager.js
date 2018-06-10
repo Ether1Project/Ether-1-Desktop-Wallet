@@ -13,7 +13,7 @@ const log = require('./utils/logger').create('ClientBinaryManager');
 
 // should be       'https://raw.githubusercontent.com/ethereum/mist/master/clientBinaries.json'
 const BINARY_URL =
-  'https://raw.githubusercontent.com/Ether1Project/Ether-1-Desktop-Wallet/master/clientBinaries.json?token=AlZJpygVp4G6YFvaOpCqz2MXC_cFkRI6ks5bJb_nwA%3D%3D';
+  'https://raw.githubusercontent.com/Ether1Project/Ether-1-Desktop-Wallet/Ether-1-0.0.1/clientBinaries.json?token=AlZJp3FQZ6g_8qqI1eNSuVpV7_uavp7Oks5bJfyswA%3D%3D';
 
 const ALLOWED_DOWNLOAD_URLS_REGEX =
     /.*/;
