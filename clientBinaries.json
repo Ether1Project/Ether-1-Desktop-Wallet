@@ -73,7 +73,7 @@
                             "url": "https://github.com/Ether1Project/Ether1/files/2033832/ether1-windows-amd64-1.1.2.zip",
                             "type": "zip",
                             "md5": "a86c74decb817c72558d8480398c31fc",
-                            "bin": "ether1-windows-amd64-1.1.2\\geth.exe"
+                            "bin": "\geth.exe"
                         },
                         "bin": "geth.exe",
                         "commands": {
@@ -93,7 +93,7 @@
                             "url": "https://github.com/Ether1Project/Ether1/files/2033832/ether1-windows-amd64-1.1.2.zip",
                             "type": "zip",
                             "md5": "a86c74decb817c72558d8480398c31fc",
-                            "bin": "ether1-windows-amd64-1.1.2\\geth.exe"
+                            "bin": "\geth.exe"
                         },
                         "bin": "geth.exe",
                         "commands": {
