@@ -98,12 +98,12 @@ gulp.task('bundling-interface', cb => {
                 && meteor-build-client ../../mist/dist_${type}/app/interface/wallet -p ""`);
     } else {
       console.log(
-        `Pulling https://github.com/ethereum/meteor-dapp-wallet/tree/${
+        `Pulling https://github.com/Ether1Project/Ether-1-Meteor-Dapp-Wallet/tree/${
           options.walletSource
         } "${options.walletSource}" branch...`
       );
       bundle(`&& cd ../dist_${type} \
-                && git clone --depth 1 https://github.com/ethereum/meteor-dapp-wallet.git \
+                && git clone --depth 1 https://github.com/Ether1Project/Ether-1-Meteor-Dapp-Wallet.git \
                 && cd meteor-dapp-wallet/app \
                 && meteor-build-client ../../app/interface/wallet -p "" \
                 && cd ../../ \
