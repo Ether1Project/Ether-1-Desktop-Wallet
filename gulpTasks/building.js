@@ -98,7 +98,7 @@ gulp.task('bundling-interface', cb => {
                 && meteor-build-client ../../mist/dist_${type}/app/interface/wallet -p ""`);
     } else {
       console.log(
-        `Pulling https://github.com/Ether1Project/Ether-1-Meteor-Dapp-Wallet/tree/${
+        `Pulling https://github.com/Ether1Project/meteor-dapp-wallet/tree/${
           options.walletSource
         } "${options.walletSource}" branch...`
       );
