@@ -120,7 +120,7 @@
             "mainNetwork": "Main-net",
             "testNetwork": "Test-net",
             "privateNetwork": "Private-net",
-            "mainnetExplain": "Ets a la xarxa gobal d'Ethereum principal",
+            "mainnetExplain": "Ets a la xarxa gobal d'Ether-1 principal",
             "testnetExplain": "Ets a la __name__. NO ENVIÏS cap Ether real a aquestes adreces",
             "privatenetExplain": "Ets a la xara privada. NO ENVIÏS cap Ether real a aquestes adreces",
             "unknownnetExplain": "Incapaç de determinar a quina xarxa ets",
@@ -155,8 +155,8 @@
             "nodeStopping": "Ether-1 node aturant-se...",
             "nodeStopped": "Node d'Ether-1 aturat",
             "nodeError": "Error de connectivitat del node d'Ether-1:'(",
-            "unableToBindPort": "El node d'Ethereum no pot executar-se. N'hi ha alguna altra instància excutant-se?",
-            "nodeSyncing": "El node d'Ethereum necessita sincronitzar-se, si us plau espera...",
+            "unableToBindPort": "El node d'Ether-1 no pot executar-se. N'hi ha alguna altra instància excutant-se?",
+            "nodeSyncing": "El node d'Ether-1 necessita sincronitzar-se, si us plau espera...",
             "nodeSyncInfo": "Descarregant bloc __displayBlock__ de __highestBlock__",
             "nodeSyncInfoStates": "Descarregant bloc __displayBlock__ de __highestBlock__, <br> Descarregant l'estructura de la cadena __displayState__ de __displayKnownStates__",
             "nodeSyncConnecting": "Cercant peers...",
@@ -168,7 +168,7 @@
                 "downloading": "Descarregant un nou node...",
                 "loadConfig": "Carregant configuració del client...",
                 "filtering": "Filtrant binaris del client...",
-                "done": "Node d'Ethereum actualitzat...",
+                "done": "Node d'Ether-1 actualitzat...",
                 "error": "Error executant el binari descarregat."
             }
         },
@@ -242,7 +242,7 @@
                 "lookupDataExplainer": "Mira això a internet"
             },
             "onboarding": {
-                "description": "Ethereum és una plataforma per aplicacions descentralitzades de la blockchain amb un llenguatge de programació complet",
+                "description": "Ether-1 és una plataforma per aplicacions descentralitzades de la blockchain amb un llenguatge de programació complet",
                 "goToTestnet": "Utilitza la xarxa de test (Rinkeby)",
                 "goToTestnetDescription": "Prova la tecnologia lliurement a la xarxa de test 'sandboxed', sembla utilitzar Ether real.",
                 "gotoMainnet": "Utilitza la xarxa principal",
@@ -258,7 +258,7 @@
                 "protectDescription": "Escull una contrasenya pel teu nou compte. Assegura't que és tant fort com si hagués de protegir les claus de casa teva!",
                 "accountTitle": "Carrega'l!",
                 "accountTitleTestnet": "Minar una mica!",
-                "etherDescription": "La xarxa d'ethereum es basa en un token anomenat “Ether”. En necessitaràs una petita quantitat per fer qualsevol cosa a la xarxa d'Ethereum.",
+                "etherDescription": "La xarxa d'Ether-1 es basa en un token anomenat “ETHO”. En necessitaràs una petita quantitat per fer qualsevol cosa a la xarxa d'Ether-1.",
                 "loadItDescription": "Si ja tens Bitcoin, o qualsevol altra criptomoneda, pots canviar-la a Ether fàcilment utilitzant changelly. <br><br> Et recomanem carregar entre <strong>0.25 i 1 Ether</strong>.",
                 "faucetDescription": "La xarxa de test Rinkeby utilitza 'Clique Proof of Authority' com a mecanisme de consens, pertant no hi ha minat. Si vols obtenir una mica d'ether de prova, vés a la Rinkeby Faucet: <strong> faucet.rinkeby.io </strong>",
                 "you": "TU",
