@@ -103,7 +103,7 @@ exports.mocha = (_module, options) => {
 
       this.geth = yield startGeth();
 
-      const appFileName = options.app === 'wallet' ? 'Ethereum Wallet' : 'Mist';
+      const appFileName = options.app === 'wallet' ? 'Ether-1 Wallet' : 'Mist';
       const platformArch = `${process.platform}-${process.arch}`;
       console.info(`${appFileName} :: ${platformArch}`);
 
@@ -234,8 +234,8 @@ exports.mocha = (_module, options) => {
           { _id: 'wallet' },
           {
             $set: {
-              url: 'https://wallet.ethereum.org',
-              redirect: 'https://wallet.ethereum.org',
+              url: 'https://wallet.ether1.org',
+              redirect: 'https://wallet.ether1.org',
               position: 1,
               permissions: { admin: true }
             }
