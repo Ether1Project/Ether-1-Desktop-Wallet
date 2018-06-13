@@ -70,7 +70,7 @@
                 "win": {
                     "x64": {
                         "download": {
-                            "url": "https://github.com/Ether1Project/Ether1/files/2033832/ether1-windows-amd64-1.1.2.zip",
+                            "url": "https://github.com/Ether1Project/Ether1/files/2096170/ether-1-windows-amd64-1.1.2.zip",
                             "type": "zip",
                             "md5": "25eb6f83fd5e00cacccb20f5ac66a9be",
                             "bin": "ether-1-windows-amd64-1.1.2\\geth.exe"
@@ -90,7 +90,7 @@
                     },
                     "ia32": {
                         "download": {
-                            "url": "https://github.com/Ether1Project/Ether1/files/2033832/ether1-windows-amd64-1.1.2.zip",
+                            "url": "https://github.com/Ether1Project/Ether1/files/2096170/ether-1-windows-amd64-1.1.2.zip",
                             "type": "zip",
                             "md5": "25eb6f83fd5e00cacccb20f5ac66a9be",
                             "bin": "ether-1-windows-amd64-1.1.2\\geth.exe"
