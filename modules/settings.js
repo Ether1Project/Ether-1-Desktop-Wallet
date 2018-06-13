@@ -93,7 +93,7 @@ class Settings {
   }
 
   get appName() {
-    return this.uiMode === 'mist' ? 'Mist' : 'Ethereum Wallet';
+    return this.uiMode === 'mist' ? 'Mist' : 'Ether-1 Wallet';
   }
 
   get appLicense() {
@@ -347,7 +347,7 @@ const argv = require('yargs')
     node: {
       demand: false,
       default: null,
-      describe: 'Node to use: geth, eth',
+      describe: 'Node to use: geth, etho',
       requiresArg: true,
       nargs: 1,
       type: 'string',
