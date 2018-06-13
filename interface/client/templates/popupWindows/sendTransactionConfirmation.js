@@ -237,7 +237,7 @@ Template['popupWindows_sendTransactionConfirmation'].helpers({
     var amount = EthTools.formatBalance(
       this.value,
       '0,0.00[0000000000000000]',
-      'ether'
+      'etho'
     );
     var dotPos = ~amount.indexOf('.')
       ? amount.indexOf('.') + 3
@@ -261,7 +261,7 @@ Template['popupWindows_sendTransactionConfirmation'].helpers({
       return EthTools.formatBalance(
         new BigNumber(gas, 10).times(new BigNumber(this.gasPrice, 10)),
         '0,0.0[0000000] unit',
-        'ether'
+        'etho'
       );
     }
   },
@@ -276,7 +276,7 @@ Template['popupWindows_sendTransactionConfirmation'].helpers({
       return EthTools.formatBalance(
         new BigNumber(gas, 10).times(new BigNumber(this.gasPrice, 10)),
         '0,0.0[0000000]',
-        'ether'
+        'etho'
       );
     }
   },
