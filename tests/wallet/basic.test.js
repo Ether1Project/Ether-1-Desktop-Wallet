@@ -11,7 +11,7 @@ test['Title test'] = function*() {
   const client = this.client;
 
   yield client.waitUntilWindowLoaded();
-  (yield client.getTitle()).should.eql('Ethereum Wallet');
+  (yield client.getTitle()).should.eql('Ether-1 Wallet');
 };
 
 test['account balances'] = function*() {
