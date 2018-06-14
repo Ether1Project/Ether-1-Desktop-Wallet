@@ -260,9 +260,9 @@ Helpers.detectNetwork = function(hash) {
       break;
 
     default:
-      console.log('Network is privatenet');
-      network.type = 'privatenet';
-      network.name = 'Private';
+      console.log('Network is mainnet');
+      network.type = 'mainnet';
+      network.name = 'Main';
   }
 
   return network;
