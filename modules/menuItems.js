@@ -579,7 +579,7 @@ let menuTempl = function(webviews) {
   ) {
     devToolsMenu.push({
       label: 'Sync with Light client (beta)',
-      enabled: true,
+      enabled: false,
       checked: ethereumNode.isLightMode,
       type: 'checkbox',
       click() {
