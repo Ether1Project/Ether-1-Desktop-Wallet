@@ -93,7 +93,7 @@ class Settings {
   }
 
   get appName() {
-    return this.uiMode === 'mist' ? 'Mist' : 'Ether-1 Wallet';
+    return this.uiMode === 'mist' ? 'Mist' : 'Ether1 Wallet';
   }
 
   get appLicense() {
