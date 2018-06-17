@@ -26,7 +26,7 @@ const options = minimist(args, {
   boolean: _.flatten(['wallet', platforms]),
   default: {
     wallet: false,
-    walletSource: 'Ether-1',
+    walletSource: 'master',
     test: 'basic',
     skipTasks: ''
   }
