@@ -99,7 +99,7 @@ class EthereumNode extends EventEmitter {
   }
 
   get isLightMode() {
-    return this._syncMode === 'full';
+    return this._syncMode === 'light';
   }
 
   get state() {
