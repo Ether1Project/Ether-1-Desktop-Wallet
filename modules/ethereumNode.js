@@ -16,7 +16,7 @@ const ethereumNodeLog = logger.create('EthereumNode');
 
 const DEFAULT_NODE_TYPE = 'geth';
 const DEFAULT_NETWORK = 'main';
-const DEFAULT_SYNCMODE = 'full';
+const DEFAULT_SYNCMODE = 'fast';
 
 const UNABLE_TO_BIND_PORT_ERROR = 'unableToBindPort';
 const NODE_START_WAIT_MS = 3000;
