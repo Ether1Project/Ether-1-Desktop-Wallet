@@ -71,7 +71,7 @@ class EthereumNode extends EventEmitter {
   }
 
   get syncMode() {
-    return this._syncMode;
+    return this._syncMode === 'full';
   }
 
   get isEth() {
@@ -99,7 +99,7 @@ class EthereumNode extends EventEmitter {
   }
 
   get isLightMode() {
-    return this._syncMode === 'light';
+    return this._syncMode === 'full';
   }
 
   get state() {
