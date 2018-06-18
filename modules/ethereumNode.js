@@ -267,7 +267,7 @@ class EthereumNode extends EventEmitter {
    * @param  {String} network  network id
    * @return {Promise}
    */
-  _start(nodeType, network, 'fast') {
+  _start(nodeType, network, syncMode) {
     ethereumNodeLog.info(`Start node: ${nodeType} ${network} ${syncMode}`);
 
     const isTestNet = network === 'test';
