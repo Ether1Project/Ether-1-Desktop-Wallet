@@ -561,7 +561,7 @@ let menuTempl = function(webviews) {
   // Enables mining menu: only in Solo mode and Ropsten network (testnet)
   if (
     ethereumNode.isOwnNode &&
-    (ethereumNode.isTestNetwork || ethereumNode.isDevNetwork)
+    (ethereumNode.isTestNetwork)
   ) {
     devToolsMenu.push({
       label: global.mining
