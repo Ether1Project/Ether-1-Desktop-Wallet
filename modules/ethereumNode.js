@@ -172,7 +172,7 @@ class EthereumNode extends EventEmitter {
       });
   }
 
-  restart(newType, newNetwork, 'fast') {
+  restart(newType, newNetwork, syncMode) {
     return Q.try(() => {
       if (!this.isOwnNode) {
         throw new Error('Cannot restart node since it was started externally');
