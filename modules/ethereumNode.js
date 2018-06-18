@@ -71,7 +71,7 @@ class EthereumNode extends EventEmitter {
   }
 
   get syncMode() {
-    return this._syncMode === 'full';
+    return this._syncMode === 'fast';
   }
 
   get isEth() {
