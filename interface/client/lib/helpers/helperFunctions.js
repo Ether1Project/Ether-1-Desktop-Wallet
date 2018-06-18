@@ -237,8 +237,10 @@ Helpers.detectNetwork = function(hash) {
   switch (hash) {
     default:
       console.log('');
-      network.type = 'privatenet';
-      network.name = 'Private';
+      //network.type = 'privatenet';
+      //network.name = 'Private';
+      //network.type = 'mainnet';
+      //network.name = 'Main';
   }
 
   return network;
