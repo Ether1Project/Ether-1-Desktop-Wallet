@@ -164,7 +164,7 @@ class EthereumNode extends EventEmitter {
         return this._start(
           this.defaultNodeType,
           this.defaultNetwork,
-          this.defaultSyncMode
+          'fast'
         ).catch(err => {
           ethereumNodeLog.error('Failed to start node', err);
           throw err;
@@ -172,7 +172,7 @@ class EthereumNode extends EventEmitter {
       });
   }
 
-  restart(newType, newNetwork, syncMode) {
+  restart(newType, newNetwork, 'fast') {
     return Q.try(() => {
       if (!this.isOwnNode) {
         throw new Error('Cannot restart node since it was started externally');
@@ -186,7 +186,7 @@ class EthereumNode extends EventEmitter {
           this._start(
             newType || this.type,
             newNetwork || this.network,
-            syncMode || this.syncMode
+            'fast' || 'fast'
           )
         )
         .then(() => Windows.loading.hide())
@@ -267,7 +267,7 @@ class EthereumNode extends EventEmitter {
    * @param  {String} network  network id
    * @return {Promise}
    */
-  _start(nodeType, network, syncMode) {
+  _start(nodeType, network, 'fast') {
     ethereumNodeLog.info(`Start node: ${nodeType} ${network} ${syncMode}`);
 
     const isTestNet = network === 'test';
@@ -296,7 +296,7 @@ class EthereumNode extends EventEmitter {
 
         Settings.saveUserData('node', this._type);
         Settings.saveUserData('network', this._network);
-        Settings.saveUserData('syncmode', this._syncMode);
+        Settings.saveUserData('syncmode', 'fast');
 
         return this._socket
           .connect(Settings.rpcConnectConfig, {
@@ -340,7 +340,7 @@ class EthereumNode extends EventEmitter {
 
     this._network = network;
     this._type = nodeType;
-    this._syncMode = syncMode;
+    this._syncMode = 'fast';
 
     const client = ClientBinaryManager.getClient(nodeType);
     let binPath;
@@ -365,7 +365,7 @@ class EthereumNode extends EventEmitter {
    * @return {Promise}
    */
   __startProcess(nodeType, network, binPath, _syncMode) {
-    let syncMode = _syncMode;
+    let syncMode = 'fast';
     if (nodeType === 'geth' && !syncMode) {
       syncMode = DEFAULT_SYNCMODE;
     }
@@ -446,7 +446,7 @@ class EthereumNode extends EventEmitter {
             nodeType === 'geth'
               ? [
                   '--syncmode',
-                  syncMode,
+                  'fast',
                   '--cache',
                   process.arch === 'x64' ? '1024' : '512'
                 ]
