@@ -43,7 +43,7 @@ class EthereumNode extends EventEmitter {
 
     this._node = null;
     this._type = null;
-    this._network = null;
+    this._network = 'main';
 
     this._socket = Sockets.get('node-ipc', Settings.rpcMode);
 
@@ -87,15 +87,15 @@ class EthereumNode extends EventEmitter {
   }
 
   get isTestNetwork() {
-    return this.network === 'test';
+    return this.network === 'main';
   }
 
   get isRinkebyNetwork() {
-    return this.network === 'rinkeby';
+    return this.network === 'main';
   }
 
   get isDevNetwork() {
-    return this.network === 'dev';
+    return this.network === 'main';
   }
 
   get isLightMode() {
@@ -270,7 +270,7 @@ class EthereumNode extends EventEmitter {
   _start(nodeType, network, syncMode) {
     ethereumNodeLog.info(`Start node: ${nodeType} ${network} ${syncMode}`);
 
-    const isTestNet = network === 'test';
+    const isTestNet = network === 'main';
 
     if (isTestNet) {
       ethereumNodeLog.debug('Node will connect to the test network');
@@ -338,7 +338,7 @@ class EthereumNode extends EventEmitter {
   __startNode(nodeType, network, syncMode) {
     this.state = STATES.STARTING;
 
-    this._network = network;
+    this._network = 'main';
     this._type = nodeType;
     this._syncMode = 'fast';
 
