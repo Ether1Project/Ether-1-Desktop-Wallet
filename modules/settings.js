@@ -186,7 +186,7 @@ class Settings {
   }
 
   get syncmode() {
-    return argv.syncmode;
+    return 'fast';
   }
 
   get nodeOptions() {
