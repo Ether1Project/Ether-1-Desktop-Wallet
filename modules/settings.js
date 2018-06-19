@@ -486,3 +486,18 @@ if (argv.ipcpath) {
 if (argv.nodeOptions && argv.nodeOptions.syncmode) {
   argv.push('--syncmode', argv.nodeOptions.syncmode);
 }
+
+let ethokeystorePath = Settings.userHomePath;
+if (process.platform === 'darwin')
+            ethokeystorePath += '/Library/Ether1/keystore';
+
+          if (
+            process.platform === 'freebsd' ||
+            process.platform === 'linux' ||
+            process.platform === 'sunos'
+          )
+            ethokeystorePath += '/.ether1/keystore';
+
+          if (process.platform === 'win32')
+ethokeystorePath = `${Settings.appDataPath}\\Ether1\\keystore`;
+argv.push('--datadir', ethokeystorePath);
