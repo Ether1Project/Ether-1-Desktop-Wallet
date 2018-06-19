@@ -137,21 +137,23 @@ ipc.on('backendAction_checkWalletFile', (e, path) => {
 
       log.debug(`Importing ${type} account...`);
 
-      if (type === 'ethersale') {
-        e.sender.send('uiAction_checkedWalletFile', null, 'presale');
-      } else if (type === 'web3') {
+      //if (type === 'ethersale') {
+       // e.sender.send('uiAction_checkedWalletFile', null, 'presale');
+      //} else if (type === 'web3') {
+       if (true) {
         e.sender.send('uiAction_checkedWalletFile', null, 'web3');
 
         let keystorePath = Settings.userHomePath;
         // eth
-        if (ethereumNode.isEth) {
-          if (process.platform === 'win32') {
-            keystorePath = `${Settings.appDataPath}\\Web3\\keys`;
-          } else {
-            keystorePath += '/.web3/keys';
-          }
+        //if (ethereumNode.isEth) {
+        //  if (process.platform === 'win32') {
+        //    keystorePath = `${Settings.appDataPath}\\Web3\\keys`;
+        //  } else {
+        //    keystorePath += '/.web3/keys';
+        //  }
           // geth
-        } else {
+        //} else {
+         if (true) {
           if (process.platform === 'darwin')
             keystorePath += '/Library/Ether1/keystore';
 
