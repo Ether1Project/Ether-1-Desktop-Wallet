@@ -153,14 +153,14 @@ ipc.on('backendAction_checkWalletFile', (e, path) => {
           // geth
         } else {
           if (process.platform === 'darwin')
-            keystorePath += '/Library/Ethereum/keystore';
+            keystorePath += '/Library/Ether1/keystore';
 
           if (
             process.platform === 'freebsd' ||
             process.platform === 'linux' ||
             process.platform === 'sunos'
           )
-            keystorePath += '/.ethereum/keystore';
+            keystorePath += '/.ether1/keystore';
 
           if (process.platform === 'win32')
             keystorePath = `${Settings.appDataPath}\\Ether1\\keystore`;
