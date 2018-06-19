@@ -597,12 +597,12 @@ let menuTempl = function(webviews) {
       }
     );
   }
-  menu.push({
-    label:
-      (global.mining ? '⛏ ' : '') +
-     i18n.t('mist.applicationMenu.develop.label'),
-  submenu: devToolsMenu
-});
+ // menu.push({
+ //   label:
+ //     (global.mining ? '⛏ ' : '') +
+ //    i18n.t('mist.applicationMenu.develop.label'),
+ // submenu: devToolsMenu
+//});
   // WINDOW
   menu.push({
     label: i18n.t('mist.applicationMenu.window.label'),
