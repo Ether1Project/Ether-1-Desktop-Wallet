@@ -38,7 +38,7 @@ RequestExecutionLevel admin
 #!define VERSIONBUILD 7
 
 # Define some script globals
-Name "${GROUPNAME} ${APPNAME}"
+Name "${APPNAME}"
 Icon "..\dist_${TYPE}\build\icon.ico"
 OutFile "..\dist_${TYPE}\release\${APPNAME}-installer-${VERSIONMAJOR}-${VERSIONMINOR}-${VERSIONBUILD}.exe"
 var FILEDIR
