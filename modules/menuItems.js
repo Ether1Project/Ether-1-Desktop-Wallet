@@ -559,51 +559,50 @@ let menuTempl = function(webviews) {
   }
   
   // Enables mining menu: only in Solo mode and Ropsten network (testnet)
--  if (
--    ethereumNode.isOwnNode &&
--    (ethereumNode.isTestNetwork)
--  ) {
--    devToolsMenu.push({
--      label: global.mining
--        ? i18n.t('mist.applicationMenu.develop.stopMining')
--        : i18n.t('mist.applicationMenu.develop.startMining'),
--      accelerator: 'CommandOrControl+Shift+M',
--      enabled: true,
--      click() {
--        if (global.mining) {
--          stopMining(webviews);
--        } else {
--          startMining(webviews);
--        }
--      }
--    });
--  }
--
--  if (global.mode !== 'wallet') {
--    devToolsMenu.push(
--      {
--        type: 'separator'
--      },
--      {
--        label: i18n.t('mist.applicationMenu.develop.enableSwarm'),
--        enabled: true,
--        checked: [SwarmState.Enabling, SwarmState.Enabled].includes(
--          global.store.getState().settings.swarmState
--        ),
--        type: 'checkbox',
--        click() {
--          store.dispatch(toggleSwarm());
--        }
--      }
--    );
--  }
--
--  //menu.push({
--  //  label:
--  //    (global.mining ? '⛏ ' : '') +
--    //  i18n.t('mist.applicationMenu.develop.label'),
--   // submenu: devToolsMenu
--  //});
+  if (
+    ethereumNode.isOwnNode &&
+    (ethereumNode.isTestNetwork)
+  ) {
+    devToolsMenu.push({
+      label: global.mining
+        ? i18n.t('mist.applicationMenu.develop.stopMining')
+       : i18n.t('mist.applicationMenu.develop.startMining'),
+      accelerator: 'CommandOrControl+Shift+M',
+      enabled: true,
+      click() {
+        if (global.mining) {
+          stopMining(webviews);
+        } else {
+          startMining(webviews);
+        }
+      }
+    });
+  }
+
+  if (global.mode !== 'wallet') {
+    devToolsMenu.push(
+      {
+        type: 'separator'
+      },
+      {
+        label: i18n.t('mist.applicationMenu.develop.enableSwarm'),
+        enabled: true,
+        checked: [SwarmState.Enabling, SwarmState.Enabled].includes(
+          global.store.getState().settings.swarmState
+        ),
+        type: 'checkbox',
+        click() {
+         store.dispatch(toggleSwarm());
+        }
+      }
+    );
+  }
+ // menu.push({
+  //  label:
+  //    (global.mining ? '⛏ ' : '') +
+   //  i18n.t('mist.applicationMenu.develop.label'),
+ // submenu: devToolsMenu
+//});
   // WINDOW
   menu.push({
     label: i18n.t('mist.applicationMenu.window.label'),
