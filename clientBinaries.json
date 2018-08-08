@@ -6,9 +6,9 @@
                 "linux": {
                     "x64": {
                         "download": {
-                            "url": "https://github.com/Ether1Project/Ether1/files/2121957/ether1-linux-1.1.3.tar.gz",
+                            "url": "https://github.com/Ether1Project/Ether1/releases/download/1.1.4/ether1-linux-1.1.4.tar.gz",
                             "type": "tar",
-                            "md5": "b21a036a0f716dd70853554a510585b5",
+                            "md5": "4bc44269b9b922ed1089f026e29f9dcc",
                             "bin": "ether1-linux-1.1.4/geth"
                         },
                         "bin": "geth",
@@ -26,9 +26,9 @@
                     },
                     "ia32": {
                         "download": {
-                            "url": "https://github.com/Ether1Project/Ether1/files/2121957/ether1-linux-1.1.3.tar.gz",
+                            "url": "https://github.com/Ether1Project/Ether1/releases/download/1.1.4/ether1-linux-1.1.4.tar.gz",
                             "type": "tar",
-                            "md5": "b21a036a0f716dd70853554a510585b5",
+                            "md5": "4bc44269b9b922ed1089f026e29f9dcc",
                             "bin": "ether1-linux-1.1.4/geth"
                         },
                         "bin": "geth",
@@ -48,9 +48,9 @@
                 "mac": {
                     "x64": {
                         "download": {
-                            "url": "https://github.com/Ether1Project/Ether1/files/2121957/ether1-linux-1.1.3.tar.gz",
+                            "url": "https://github.com/Ether1Project/Ether1/releases/download/1.1.4/ether1-linux-1.1.4.tar.gz",
                             "type": "tar",
-                            "md5": "b21a036a0f716dd70853554a510585b5",
+                            "md5": "4bc44269b9b922ed1089f026e29f9dcc",
                             "bin": "ether1-linux-1.1.4/geth"
                         },
                         "bin": "geth",
