@@ -1,15 +1,15 @@
 {
     "clients": {
         "Geth": {
-            "version": "1.1.4-Ether1",
+            "version": "1.1.5-Ether1",
             "platforms": {
                 "linux": {
                     "x64": {
                         "download": {
-                            "url": "https://github.com/Ether1Project/Ether1/releases/download/1.1.4/ether1-linux-1.1.4.tar.gz",
+                            "url": "https://github.com/Ether1Project/Ether1/releases/download/1.1.5/ether1-linux-1.1.5.tar.gz",
                             "type": "tar",
-                            "md5": "4bc44269b9b922ed1089f026e29f9dcc",
-                            "bin": "ether1-linux-1.1.4/geth"
+                            "md5": "06023115590a06119cd377410b4f4a6b",
+                            "bin": "ether1-linux-1.1.5/geth"
                         },
                         "bin": "geth",
                         "commands": {
@@ -19,17 +19,17 @@
                                 ],
                                 "output": [
                                     "Geth",
-                                    "1.1.4-Ether1"
+                                    "1.1.5-Ether1"
                                 ]
                             }
                         }
                     },
                     "ia32": {
                         "download": {
-                            "url": "https://github.com/Ether1Project/Ether1/releases/download/1.1.4/ether1-linux-1.1.4.tar.gz",
+                            "url": "https://github.com/Ether1Project/Ether1/releases/download/1.1.5/ether1-linux-1.1.5.tar.gz",
                             "type": "tar",
-                            "md5": "4bc44269b9b922ed1089f026e29f9dcc",
-                            "bin": "ether1-linux-1.1.4/geth"
+                            "md5": "06023115590a06119cd377410b4f4a6b",
+                            "bin": "ether1-linux-1.1.5/geth"
                         },
                         "bin": "geth",
                         "commands": {
@@ -39,7 +39,7 @@
                                 ],
                                 "output": [
                                     "Geth",
-                                    "1.1.4-Ether1"
+                                    "1.1.5-Ether1"
                                 ]
                             }
                         }
@@ -48,10 +48,10 @@
                 "mac": {
                     "x64": {
                         "download": {
-                            "url": "https://github.com/Ether1Project/Ether1/releases/download/1.1.4/ether1-linux-1.1.4.tar.gz",
+                            "url": "https://github.com/Ether1Project/Ether1/releases/download/1.1.5/ether1-linux-1.1.5.tar.gz",
                             "type": "tar",
-                            "md5": "4bc44269b9b922ed1089f026e29f9dcc",
-                            "bin": "ether1-linux-1.1.4/geth"
+                            "md5": "06023115590a06119cd377410b4f4a6b",
+                            "bin": "ether1-linux-1.1.5/geth"
                         },
                         "bin": "geth",
                         "commands": {
@@ -61,7 +61,7 @@
                                 ],
                                 "output": [
                                     "Geth",
-                                    "1.1.4-Ether1"
+                                    "1.1.5-Ether1"
                                 ]
                             }
                         }
@@ -70,10 +70,10 @@
                 "win": {
                     "x64": {
                         "download": {
-                            "url": "https://github.com/Ether1Project/Ether1/releases/download/1.1.4/ether-1-windows-amd64-1.1.4.zip",
+                            "url": "https://github.com/Ether1Project/Ether1/releases/download/1.1.5/ether-1-windows-amd64-1.1.5.zip",
                             "type": "zip",
-                            "md5": "a1109a629f43d52d1e27245975211388",
-                            "bin": "ether-1-windows-amd64-1.1.4\\geth.exe"
+                            "md5": "fd83b167104f8c1bf237c8c7796709e3",
+                            "bin": "ether-1-windows-amd64-1.1.5\\geth.exe"
                         },
                         "bin": "geth.exe",
                         "commands": {
@@ -83,17 +83,17 @@
                                 ],
                                 "output": [
                                     "Geth",
-                                    "1.1.4-Ether1"
+                                    "1.1.5-Ether1"
                                 ]
                             }
                         }
                     },
                     "ia32": {
                         "download": {
-                            "url": "https://github.com/Ether1Project/Ether1/releases/download/1.1.4/ether-1-windows-amd64-1.1.4.zip",
+                            "url": "https://github.com/Ether1Project/Ether1/releases/download/1.1.5/ether-1-windows-amd64-1.1.5.zip",
                             "type": "zip",
-                            "md5": "a1109a629f43d52d1e27245975211388",
-                            "bin": "ether-1-windows-amd64-1.1.4\\geth.exe"
+                            "md5": "fd83b167104f8c1bf237c8c7796709e3",
+                            "bin": "ether-1-windows-amd64-1.1.5\\geth.exe"
                         },
                         "bin": "geth.exe",
                         "commands": {
@@ -103,7 +103,7 @@
                                 ],
                                 "output": [
                                     "Geth",
-                                    "1.1.4-Ether1"
+                                    "1.1.5-Ether1"
                                 ]
                             }
                         }
